@@ -218,3 +218,7 @@ target_link_libraries(talker ${catkin_LIBRARIES})
 
 add_executable(listener src/listener.cpp)
 target_link_libraries(listener ${catkin_LIBRARIES})
+
+add_executable(controller src/controller.cpp)
+target_link_libraries(controller ${catkin_LIBRARIES})
+
