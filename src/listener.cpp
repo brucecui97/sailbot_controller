@@ -1,12 +1,15 @@
 #include "ros/ros.h"
 #include "std_msgs/String.h"
+#include <sailbot/SailRudderRad.h>
 
 /**
  * This tutorial demonstrates simple receipt of messages over the ROS system.
  */
-void chatterCallback(const std_msgs::String::ConstPtr& msg)
+void chatterCallback(const sailbot::SailRudderRad::ConstPtr  & msg)
 {
-  ROS_INFO("I heard: [%s]", msg->data.c_str());
+  std::string a = "avbdsadsa";
+  ROS_INFO("sail angle heard %s\n", std::to_string(msg->sail_angle).c_str());
+  ROS_INFO("rudder angle heard %s\n", std::to_string(msg->rudder_angle).c_str());
 }
 
 int main(int argc, char **argv)
